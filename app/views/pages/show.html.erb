@@ -1,0 +1,22 @@
+<div class="jumbotron text-center">
+  <h1><%= @shop.title %></h1>
+</div>
+
+<div class="container">
+	<div class="col-sm-6">
+		<% @shop.dishes.each do |dish| %>
+		<div class="panel panel-primary">
+		  <div class="panel-heading">
+		  	<h3 class="panel-title"><%= dish.name %></h3>
+		  </div>
+		  <div class="panel-body">
+		    <%= image_tag(dish.image.url(:medium), class: "img-rounded") %>
+		    <h5><%= dish.description %></h5>
+		  </div>
+		  <div class="panel-body">
+		  	<h4><%= dish.price %> $</h4><h4 class="text-right"><%= link_to "Add to cart", pages_show_path %></h4>
+		  </div>
+		</div>	
+		<% end %>
+	</div>
+</div>

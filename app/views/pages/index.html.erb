@@ -1,0 +1,20 @@
+<div class="jumbotron text-center">
+  <h1>Welcome to FoodExpress </h1>
+  <p>Best reustarants in the world.</p> 
+</div>
+
+<div class="container">
+	<% @shops.each do |shop| %>
+		<div class="row">
+		  <div class="col-sm-6 col-md-4">
+		    <div class="thumbnail">
+		      <%= link_to image_tag(shop.image.url(:medium)), pages_show_path(shop.id) %>
+		      <div class="caption">
+		        <h3><%= link_to shop.title, pages_show_path(shop.id) %></h3>
+		      </div>
+		    </div>
+		  </div>
+		<% end %>  
+	</div>	
+
+</div>

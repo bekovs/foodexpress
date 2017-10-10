@@ -15,7 +15,7 @@ permit_params :title, :image, :description
 	form do |f|
 	  f.inputs do
 	    f.input :title
-	    f.input :image, as: :file, :hint => image_tag(f.object.image.url(:thumb))
+	    f.input :image, as: :file
 	    f.input :description
 	  end
 	  f.actions

@@ -16,7 +16,7 @@ permit_params :name, :price, :description, :shop_id, :image
 	form do |f|
 	  f.inputs do
 	    f.input :name
-	    f.input :image, as: :file, :hint => image_tag(f.object.image.url(:thumb))
+	    f.input :image, as: :file
 	    f.input :description
 	    f.input :price
 	    f.input :shop

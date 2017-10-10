@@ -6,8 +6,7 @@ class PagesController < ApplicationController
 	end
 
 	def show
-		@shop = Shop.find(params[:id])
-		@dish = Dish.find(params[:id])		
+		@shop = Shop.find(params[:id])		
 	end
 
 end
