@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -20,7 +20,7 @@
       <ul class="navbar-nav navbar-right">
         <% if user_signed_in? %>
           <p class="navbar-text">
-            Hello, <%= link_to current_user.name, edit_user_registration_path(current_user), class: 'navbar-link' %>
+            Hello, <%= link_to current_user.name, edit_user_registration_path(current_user), class: 'navbar-link' %> <%= image_tag(current_user.photo.url(:mini), class: "img-circle") %>
           </p>
           <ul class="nav navbar-nav">
             <li class="dropdown">
@@ -34,8 +34,8 @@
             </li>
           </ul>
         <% else %>
-          <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-default navbar-btn' %>
-          <%= link_to 'Log in', new_user_session_path, class: 'btn btn-default navbar-btn' %>
+          <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary navbar-btn' %>
+          <%= link_to 'Log in', new_user_session_path, class: 'btn btn-primary navbar-btn' %>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
